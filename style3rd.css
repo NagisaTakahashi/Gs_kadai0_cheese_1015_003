@@ -1,0 +1,792 @@
+/* ここから下に記載していく */
+
+/* 共通 */
+
+@charset "utf-8";
+html{
+  font-size: 62.5%; /*16px * 62.5% = 10px */
+}
+
+body{
+  color: #222222;
+  font-family:'ryo-gothic-plusn', sans-serif, 'Playfair Display', serif, 'Open Sans';
+  font-size: 1.6rem;
+  line-height: 2.0em;
+  letter-spacing:  0.2em;
+  margin:auto
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+a{   /* //aタグリンクの色設定の無効化 */
+  color:inherit;
+  text-decoration: none;
+}
+
+
+/* //共通 */
+
+/* ---------header-------- */
+
+.header-wrapper{
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  width: 90%;
+  padding: 0 5% 0 5%;
+  height: 72px;
+  background-color: #F7F2F0;
+  opacity: 0.6;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.navi-logo{
+  width: auto;
+  height: 54px;
+}
+
+.navi-list{
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Playfair Display";
+  text-transform: capitalize;
+}
+
+.navi-item{
+  margin: 27px 0 27px 40px;
+}
+
+.navi-listcolor:visited{
+  color: #E88D80;
+}
+
+.navi-listcolor:hover{
+  color:#6D5E55;
+}
+
+/* ホバー＆訪問済みの注意点【自分用メモ】
+navi-list全体にかけると全部一挙に色が変わるので
+１つ１つの項目にホバーするようにするために
+navi-listcolorで指定してaタグに直接
+当てに行かないといけない！ */
+
+
+
+
+/* ---------hero-image-------- */
+
+.hero-image{
+  text-align: center;
+  position: relative;
+} 
+
+.kv{
+  width: 100%;
+  height: 520px;
+  object-fit: cover; /*指定の高さでトリミング */
+}
+ 
+.catchcopy{
+  width: 1200px; /*折返し防止のためにあえて設定 */
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  font-family: 'ryo-gothic-plusn';
+}
+
+.hero-image__title{
+  font-size: 4.8rem;
+  margin-bottom: 30px;
+}
+
+.hero-image__subtitle{
+  font-size: 3.6rem;
+}
+
+
+/* ---------section共通-------- */
+
+
+.section{
+  padding: 60px 0 80px;
+}
+
+.title-group{
+  padding: 40px 0 60px;
+  text-align: center;
+}
+
+
+.contents-title{
+  color: #000;
+  font-size: 80px;
+  height: 80px;
+  /* margin-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px ; */
+  font-family: "Playfair Display";
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+.contentes-subtitle{
+  color: #f9d6c3;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.contents-text{
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 2.2;
+  font-size: 1em;
+  font-family:'ryo-gothic-plusn', sans-serif;
+}
+
+.contents-text:last-of-type{
+  margin-bottom: 0;
+}
+
+.text-group{
+  padding-bottom: 40px;
+}
+
+/* ---------concept-------- */
+
+/* .concept-img-group{
+  display: flex;
+  width: 25%;
+} */
+
+.concept-img-group{
+	display: -webkit-flex;
+	display: flex;
+}
+
+.concept-img-group img{
+  width: calc( 100% / 4 ); 
+}
+
+
+.concept .text-group{
+  padding-bottom: 0;
+}
+
+
+/* ---------about-------- */
+
+.about-card{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: auto;
+}
+
+
+.about-card-img{
+  width: 600px;
+  height: 400px;
+  object-fit: cover; 
+}
+
+.shiho{
+  object-position: 100% 5%;
+}
+/* shihoの画像だけ上下中央ではなく上から5%の部分でトリミングする（選り抜き部分を見せるため） */
+
+
+.about-card-textbg{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fafafa;
+  width: 550px;
+  height: 400px;
+  padding-left: 50px;
+}
+
+.about-card-textbgleft{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fafafa;
+  width: 430px;
+  height: 400px;
+  padding-left: 120px;
+  padding-right: 50px;
+}
+
+.about-card-title{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.text-card-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-card-detail{
+  width: 440px;
+  text-align: left;
+  line-height: 2;
+  font-size: 1.4rem;
+}
+
+.about-card-detail a{
+  color: #E88D80;
+}
+
+.about-card-title p{
+  color: #E88D80
+}
+
+
+
+/* ---------news-------- */
+
+.news_contents{
+  width: 960px;
+  margin: auto;
+  display: flex
+}
+
+/* .news_item img{
+  width: 300px;
+  height: 200px;
+  object-fit: cover; 
+} */
+
+.news_item img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+}
+
+
+.news_item{
+  width: 300px;
+  font-family: 'ryo-gothic-plusn';
+  font-size: 1.2rem;
+}
+
+.news_item a{
+  color: #E88D80;
+}
+
+.news_date{
+  margin: 30px 0 24px 0;
+  font-weight: bold;
+  font-family: 'ryo-gothic-plusn';
+  font-size: 1.4rem;
+}
+
+.btn{
+  display: block;
+  width: 300px;
+  padding: 21px 0;
+  background-color: #f9d6c3;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  margin: 80px auto 40px;
+  text-align: center;
+  text-decoration: none
+}
+
+.btn:hover{
+  background-color: #E88D80;
+}
+
+
+/* ---------company-------- */
+
+.company{
+  background-color: #fafafa;
+  font-family: 'ryo-gothic-plusn';
+}
+
+
+.companyform_info{
+  width: 520px;
+  margin: 60px auto 0 auto; /*マージン相殺回避のためbottomを0に*/
+  /* padding-bottom: 60px; マージン相殺回避のためここだけpaddingにした */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.companyform-title{
+  width: 140px;
+  /* height: 20px; */
+  margin: 0 0 30px;
+  text-transform: uppercase;
+}
+
+.companyform-item{
+  width: 380px;
+  /* height: 20px; */
+  margin: 0 0 30px;
+}
+
+.map{
+  text-align: center;
+}
+
+.companyform_info a{
+  text-decoration: underline;
+}
+
+
+.companyform_info a:hover{
+  color:#E88D80;
+  text-decoration: underline;
+}
+
+
+/* ---------contact-------- */
+
+.contactform_info{
+  width: 640px;
+  margin: 60px auto 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'ryo-gothic-plusn';
+}
+
+.contactform-title{
+  font-size: 1.4rem;
+  width: 224px;
+  border-right: solid 1px #bfbfbf;
+  margin-right: 16px;
+  padding-left: 16px;
+  padding-top: 20px
+}
+
+.contactform-title.jogai{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+
+.instalink{
+  color: #E88D80;
+}
+
+
+input[type*="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: solid 1px #a0a0a0;
+  background-color: #f4f4f4;
+  border-radius: 20%;
+  margin-top: 7px;
+}
+
+input[type*="checkbox"]:checked{
+  background-color: #f9d6c3;
+  border: solid 1px #E88D80;
+}
+
+
+.focus:focus{
+	outline: 1px solid #E88D80;
+}
+/* Focusしたときの枠線をデフォルトの青から色変更した！ */
+
+
+.contactform-item{
+  width: 400px;
+  margin: 0 0 16px;
+  padding-top: 16px;
+}
+
+.textinput{
+  width: 328px;
+  height: 36px;
+  border: solid 1px #bfbfbf;
+  border-radius: 4px;
+}
+
+.found{
+  width: 334px;
+}
+
+.textinputwide{
+  width: 328px;
+  resize: none;
+  border: solid 1px #bfbfbf;
+  border-radius: 4px;
+}
+
+.choice{
+  width: 340px;
+  margin-bottom: 24px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+
+.choice.jogai{
+  margin-bottom: 16px;
+}
+
+.motivation-form{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 24px;
+}
+
+
+.sen{
+  display: flex;
+  border-bottom: solid 1px #bfbfbf;
+}
+
+
+.top{
+  display: flex;
+  border-top: solid 1px #bfbfbf;
+}
+
+.form-btn{
+  margin: 80px auto 120px;
+}
+
+
+
+
+
+/* ---------footer-------- */
+
+.footer{
+  width: 100%;
+  background-color: #F8F8F8;
+  padding: 30px 0;
+  position: relative; /* ボタン用に土台のrelative設定 */
+}
+
+.btn-pagetop{
+  position: fixed;
+  z-index: 999;
+  bottom: 38px;
+  right: 78px;
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #DDDDDD;
+}
+
+.btn-pagetop:hover{
+  background-color: #E88D80;
+}
+
+.icon-up{
+  display: block;
+  padding: 10px 0;
+  color: #fff; 
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.copyright{
+  display: block;
+  color: #222222;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+/* 以下レスポンシブ */
+
+@media screen and (max-width:640px){
+
+  
+  /* ---section共通---- */
+
+
+
+  .section{
+    box-sizing: border-box;
+    width: 100%;    
+    padding: 30px 24px 40px;
+  }
+
+  body{
+    font-size: 3.2vw;
+  }
+
+  .text-group{
+    box-sizing: border-box;
+    width: 100%;    
+    padding: 0 80px 30px;
+  }
+
+
+
+  
+
+
+
+
+  /* ---hero-image---- */
+
+  .hero-image{
+    padding-top: 72px;
+  }
+
+  .kv {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+
+  
+
+
+
+
+  /* ---about---- */
+
+
+  .about-card {
+    /* display: flex; */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-card-img{
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+  }
+
+  .about-card-textbg{
+    width: 100%;
+    padding-left: 0;
+    box-sizing: border-box;
+    padding: 0 3vw
+  }
+
+  .about-card-textbgleft{
+    width: 550px;
+    height: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 2vw
+  }
+
+  .about-card-title{
+    display: block;
+    box-sizing: border-box;
+  }
+
+  /* カードの順番をレスポンシブのときだけ並び替え */
+  .about-card-detail{
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .order1 {
+    order: 1; /*上から1番目に表示*/
+  }
+  .order2 {
+    order: 2; /*上から2番目に表示*/
+  }
+ .order3 {
+    order: 3; /*上から3番目に表示*/
+  }
+  .order4 {
+    order: 4; /*上から4番目に表示*/
+  }
+  .order5 {
+    order: 5; /*上から4番目に表示*/
+  }
+  .order6 {
+    order: 6; /*上から4番目に表示*/
+  }
+
+  /* 並び替えここまで */
+
+  .text-card-group{
+    display: block;
+    padding: 5vh 0 0 0;
+  }
+
+  /* ---news---- */
+
+
+  .news_contents{
+    display: block;
+    width: 100%;
+  }
+
+
+  .news_item{
+    width: 100%;
+    padding-bottom: 8vh;
+  }
+
+  .news_item img{
+    /* width: 100%; */
+    height: 66%;
+    object-fit: cover;
+  }
+
+  .news p{
+    padding-left: 4vw;
+    font-size: 3.6vw;
+  }
+
+  .btn{
+    width: 100%;
+  }
+
+
+
+  /* ---company---- */
+
+ 
+
+  .companyform_info{
+    width: 100%;
+  }
+
+  .companyform-title {
+    width: 15vw;
+  }
+
+  .companyform-item{
+    width: 70vw;
+  }
+
+  /* 地図をレスポンシブさせるための表記 */
+  .map {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%;
+  }
+  
+  .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 地図をレスポンシブさせるための表記 */
+
+  /* ---contact---- */
+
+
+
+  .contactform_info{
+    width: 100%;
+    display: block;
+  }
+
+  .contactform-title {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 4px 0;
+    border: none;
+  }
+
+  .contactform-title.jogai{
+    padding: 0 0 4px 0;
+  }
+
+  .contactform-item {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 16px 0;
+  }
+
+  p.choice{
+    margin-bottom: 8px;
+  }
+
+  label{
+    width: 85vw;
+
+  }
+
+  p.choice.jogai{
+    margin-bottom: 8px;
+  }
+
+
+  input[type*="checkbox"] {
+    margin-top: 4px;
+  }
+
+  .focus{
+    width: 100%;
+  }
+
+  .top{
+    border: none;
+  }
+
+
+
+  .sen{
+    display: block;
+    border: none;
+  }
+
+  .sp_hid {
+    display: none;
+  }
+
+  /* ↑改行しないために改行br自体にクラス名を付けてSP版で表示させなくしている！！ */
+
+  /* ---footer---- */
+
+ .btn-pagetop{
+  display: none;
+ } 
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+}
