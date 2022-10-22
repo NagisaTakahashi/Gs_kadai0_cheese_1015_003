@@ -6,7 +6,7 @@ Gs_kadai0_cheese_1015_003
 
 ## ①課題内容（どんな作品か）
 
-- RecoutureのLP<br>
+- 自社サイト：Recouture（リクチュール）のLP<br>
 ※cheese academyのフォーマット（レイアウト構造）を生かしつつ若干レイアウトもアレンジ。<br>
 ※中身はすべてRecouture仕様に変更。（ダミー情報は省き、実際に公開しても大丈夫なように正しい情報を載せました。）<br>
 ※Recoutureの現行LP（　https://recouture-official.com/　）　
